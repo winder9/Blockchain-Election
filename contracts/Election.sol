@@ -8,11 +8,13 @@ contract Election {
         string name;
         uint voteCount;
     }
+    uint public candidatesCount;
 
     mapping(uint => Candidate) public candidates;
 
     // Constructor
     constructor(uint256 _initialSupply) public {
+        candidatesCount = 0;
         addCandidate("Candidate 1");
         addCandidate("Candidate 2");
     }
